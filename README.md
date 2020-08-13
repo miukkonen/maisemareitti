@@ -1,2 +1,2 @@
 # maisemareitti
-Näsijärven maisemareitin kelikamerakuvat html-sivulla
+Näsijärven maisemareitin kelikamerakuvat html-sivulla.
