@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Maisemareitti kelikamerat</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+
+   </head>
+
+
+   <body>
+
+
+     <section class="section">
+
+       <div class="container" style="">
+
+         <h1 class="title">Näsijärven maisemareitti</h1>
+         <p class="subtitle">Kelikamerakuvat Digitrafficin rajapinnasta</p>
+
+         <div id="images">
+
+         </div>
+
+
+       </div>
+
+     </section>
+
+
+     <script>
+
+         // Halutut kuvat hard-koodattu tänne
+         const image_urls = [
+
+           'http://weathercam.digitraffic.fi/C0454401.jpg',          // Kissanmaa itään
+           'http://weathercam.digitraffic.fi/C0454402.jpg',          // Kissanmaa länteen
+           'http://weathercam.digitraffic.fi/C0454409.jpg',          // Kissanmaa tie
+
+           'http://weathercam.digitraffic.fi/C0461100.jpg',          // Kalevan puistotie
+           'http://weathercam.digitraffic.fi/C0461000.jpg',          // Marjatansilta
+           'http://weathercam.digitraffic.fi/C0460900.jpg',          // Rauhaniemi
+           'http://weathercam.digitraffic.fi/C0460700.jpg',          // Armonkallio
+
+         ]
+
+
+         // Muodostaa kamerakuvista html-blokkeja
+         function showImages() {
+
+           const images_html = image_urls.map(url => {
+
+             return `
+
+                       <div>
+
+                         <img src='${url}'></img>
+
+                       </div>
+
+             `
+
+           }).join('')
+
+           document.getElementById('images').innerHTML = images_html
+
+         }
+
+
+         // Kun koko dokumentti on latautunut suoritetaan kamerakuvien haku
+         document.addEventListener("DOMContentLoaded", showImages)
+
+
+     </script>
+
+   </body>
+
+</html>
